@@ -1,4 +1,4 @@
-/*
+
 const express = require('express');
 const redis = require('redis');
 
@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 app.listen(8081, () => {
   console.log('Listening on port 8081');
 });
-*/
+/*
 const express = require('express');
 const app = express();
 
@@ -30,3 +30,4 @@ app.get('/', (req, res) => {
 app.listen(8081, () => {
   console.log('Listening on port 8081');
 });
+*/
