@@ -1,7 +1,7 @@
-sudo: require
-services: 
- - docker
-
+#sudo: require
+#services: 
+# - docker
+language: generic
 #before_install:
 #- docker build -t dawidmbury/docker-visits-single -f Dockerfile.dev .
 
