@@ -1,0 +1,24 @@
+sudo: require
+services: 
+ - docker
+
+before_install:
+# - docker build -t dawidmbury/react-test -f ./client/Dockerfile.dev ./client #watch into client directory to see files
+
+script:
+# - docker run -e CI=true dawidmbury/react-test npm run test -- --watchAll=false
+
+deploy:
+ provider: elasticbeanstalk
+ region: "us-east-2"
+ app: "visits-single"
+ env: "VisitsSingle-env"
+ bucket_name: "elasticbeanstalk-us-east-2-137670674866"
+ bucket_path: "visits-single"
+ on:
+  branch: master
+ access_key_id: 
+  secure: "$AWS_ACCESS_KEY"
+ secret_access_key:
+  secure: "$AWS_SECRET_KEY"
+  
