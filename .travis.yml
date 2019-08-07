@@ -3,9 +3,9 @@ services:
  - docker
 
 before_install:
-# - docker build -t dawidmbury/react-test -f ./client/Dockerfile.dev ./client #watch into client directory to see files
+- docker build -t dawidmbury/docker-visits-single -f Dockerfile.dev .
 
-script:
+#script:
 # - docker run -e CI=true dawidmbury/react-test npm run test -- --watchAll=false
 
 deploy:
