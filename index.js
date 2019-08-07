@@ -1,3 +1,4 @@
+/*
 const express = require('express');
 const redis = require('redis');
 
@@ -13,6 +14,17 @@ app.get('/', (req, res) => {
     res.send('Number of visits is ' + visits);
     client.set('visits', parseInt(visits) + 1);
   });
+});
+
+app.listen(8081, () => {
+  console.log('Listening on port 8081');
+});
+*/
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Number of visits is NONE');
 });
 
 app.listen(8081, () => {
