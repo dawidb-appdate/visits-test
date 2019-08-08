@@ -4,8 +4,13 @@ const redis = require('redis');
 
 const app = express();
 const client = redis.createClient({
+  host: process.env.REDIS_HOST,
+  port: process.env.REDIS_PORT
+  
+  /*
   host: 'redis-singlevisits.sid301.0001.use2.cache.amazonaws.com',
-  potr: 6379
+  port: 6379
+  */
 });
 client.set('visits', 0);
 
